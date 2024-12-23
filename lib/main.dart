@@ -54,21 +54,29 @@ class MyApp extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                const Text("Charging Time", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
-                const SizedBox(height: 8,),
                 const Card(
                     color: Colors.purple,
                     child: Padding(
-                      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 10, horizontal: 40),
                       child: Text(
-                        "xx hrs",
-                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white), 
+                        "Charging Time: 0 hrs",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                       ),
                     )),
-                const SizedBox(height: 16,),
-
-                const Column(
-                  children: [
+                const Text(
+                  "Charging Power : 0 kWh",
+                  style: TextStyle(
+                    fontSize: 14,
+                  ),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                const Column(children: [
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -76,7 +84,9 @@ class MyApp extends StatelessWidget {
                       hintText: "Enter Current SOC(%)",
                     ),
                   ),
-                  SizedBox(height: 16,),
+                  SizedBox(
+                    height: 16,
+                  ),
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -84,7 +94,9 @@ class MyApp extends StatelessWidget {
                       hintText: "Enter Target SOC(%)",
                     ),
                   ),
-                  SizedBox(height: 16,),
+                  SizedBox(
+                    height: 16,
+                  ),
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -92,7 +104,9 @@ class MyApp extends StatelessWidget {
                       hintText: "Enter Charging Rate(A)",
                     ),
                   ),
-                  SizedBox(height: 16,),
+                  SizedBox(
+                    height: 16,
+                  ),
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -100,7 +114,9 @@ class MyApp extends StatelessWidget {
                       hintText: "Enter Voltage(V)",
                     ),
                   ),
-                  SizedBox(height: 16,),
+                  SizedBox(
+                    height: 16,
+                  ),
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -108,7 +124,9 @@ class MyApp extends StatelessWidget {
                       hintText: "Enter Bat Capacity(kWh)",
                     ),
                   ),
-                  SizedBox(height: 16,),
+                  SizedBox(
+                    height: 16,
+                  ),
                   TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -117,16 +135,18 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ]),
-              const SizedBox(height: 16,),
-              ElevatedButton(
-                onPressed: () {
-                  debugPrint('clicked button');
-                },
-                child: const Text(
-                  'Calculate',
-                  style: TextStyle(fontSize: 20),
+                const SizedBox(
+                  height: 16,
                 ),
-              )
+                ElevatedButton(
+                  onPressed: () {
+                    debugPrint('clicked button');
+                  },
+                  child: const Text(
+                    'Calculate',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                )
               ],
             ),
           ),
